@@ -3,15 +3,24 @@ global mydb
 
 
 def CadastrarUsuario(mydb):
+    Nome = input(str('escreva seu Nome:'))
+    Data_Nascimento = input(str('escreva sua Data_Nascimento:'))
+    Email = input(str('escreva seu Email:'))
+    Telefone = input(str('escreva seu Telefone:'))
+    Cpf = input(str('escreva seu Cpf:'))
+    Cidade = input(str('escreva seu Cidade:'))
+    Endereco = input(str('escreva seu Endereco:'))
     mycol = mydb.usuario
-    print("\n #####insert Usuario Inserido ###")
+    print("\n #####insert Usuario Inserido Com Sucesso. ###")
     mydict = {
-    "Nome":"Jorge Ribeiro Dos Santos",
-    "Data_Nascimento":"2000-10-10",
-    "Email":"Rodrigo.rsantos80@gmail.com","Telefone":"123914545","Cpf":"121.845.123-77",
-    "lista_Desejo":[{"Produto_ID":{"id":"630f45304b88272631990c17"},
-    "Nome":"Rodrigo Ribeiro ","Preco":"3500"},{"Vendedor_ID":{"$oid":"630f458c4b88272631990c18"},
-    "Nome":"Mercado livre","Telefone":"1239256454"}],"Cidade":"Sp","Endereco":"Rua joaquim andrade n123"
+    "Nome":Nome,
+    "Data_Nascimento":Data_Nascimento,
+    "Email":Email,
+    "Telefone":Telefone,
+    "Cpf":Cpf,
+    "lista_Desejo":[],
+    "Cidade":Cidade,
+    "Endereco":Endereco
 }
     x = mycol.insert_one(mydict)
     print(x.inserted_id)

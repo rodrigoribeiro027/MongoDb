@@ -1,10 +1,12 @@
 global mydb
 from bson.objectid import ObjectId
-
+import Produto.FindQuery
 def DeletarUsuarioID(mydb):
+    Produto.FindQuery.PegarProdutos(mydb)
+    _id = input(str('escreva seu id De Produto:'))
     mycol = mydb.Produtos
     print("\n#### Usuario Deletado do Banco####") 
-    filter = { "_id":ObjectId ("6322508fa480134c8bd68ebc") }
+    filter = { "_id":ObjectId (_id) }
     mycol.delete_one(filter)
     for x in mycol.find():
         print(x)  

@@ -9,9 +9,12 @@ def PegarProdutos(mydb):
 
 def ProdutosbyID(mydb):
     #Query
+    PegarProdutos(mydb)
+    _id =  input(str('escreva seu id do Produto:'))
     mycol = mydb.Produtos
     print("\n####QUERY####")
-    myquery = { "_id":ObjectId ("63225317be00eafd70feb51a") }
+    myquery = { "_id":ObjectId (_id) }
     mydoc = mycol.find(myquery)
     for x in mydoc:
         print(x)
+    return mydoc

@@ -9,9 +9,12 @@ def PegarUsuarios(mydb):
 
 def UsuariobyID(mydb):
     #Query
+    PegarUsuarios(mydb)
+    _id =  input(str('escreva seu id do Usuario:'))
     mycol = mydb.usuario
     print("\n####QUERY####")
-    myquery = { "_id":ObjectId ("6321b71fe575e852c80aa762") }
+    myquery = { "_id":ObjectId (_id) }
     mydoc = mycol.find(myquery)
     for x in mydoc:
         print(x)
+    return mydoc

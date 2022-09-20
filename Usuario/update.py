@@ -1,7 +1,7 @@
-global mydb
 from bson.objectid import ObjectId
 
 def AtualizarUsuarioID(mydb):
+    
     mycol = mydb.usuario
     print("\n#### Usuario Atualizado no Banco####") 
     filter = { "_id":ObjectId ("6321b71fe575e852c80aa762") }
