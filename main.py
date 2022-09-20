@@ -7,7 +7,7 @@ import ListaCase as ListaUsuario
 #pip install pymongo
 #mongodb+srv://rodrigo:password@rodrigo.8fj9sjv.mongodb.net/?retryWrites=true&w=majority
 
-client = pymongo.MongoClient("mongodb+srv://rodrigo:senha@rodrigo.8fj9sjv.mongodb.net/?retryWrites=true&w=majority", server_api=ServerApi('1'))
+client = pymongo.MongoClient("mongodb+srv://rodrigo:Password@rodrigo.8fj9sjv.mongodb.net/?retryWrites=true&w=majority", server_api=ServerApi('1'))
 
 global mydb
 mydb = client.mercado_Livre
