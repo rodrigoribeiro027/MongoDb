@@ -6,9 +6,11 @@ import Usuario.FindQuery as BuscarUsuario
 import Produto.Cadastro as CadastroProduto
 import Produto.FindQuery as BuscarProdutos
 import Produto.update as AtualizarProdutoByID
-import Produto.deletar
+import Produto.deletar as DeletarProdutoID
 import Compra.Cadastro as ComprarProduto
-
+import Usuario.ListaDesejo as Desejo
+import Compra.FindQuery as BuscaCompra
+import Compra.deletar as DeletarCompra
 def CaseUsuario(mydb):
     execucao = True
     while execucao:
@@ -17,8 +19,9 @@ def CaseUsuario(mydb):
         - [1]CadastrarUsuario\n
         - [2]PegarUsuarios\n
         - [3]UsuariobyID\n
-        - [4]DeletarUsuarioID testar\n
+        - [4]DeletarUsuarioID \n
         - [5]Atualizar Usuario\n
+        - [6]Curtir Produto\n
         ''')
         escolha = input(str('escolha Uma Obção:'))
         match escolha:
@@ -34,6 +37,8 @@ def CaseUsuario(mydb):
                 DeletarUsuario.DeletarUsuarioID(mydb)
             case '5':
                 AtualizacaoUsuario.AtualizarUsuarioID(mydb)
+            case '6':
+                Desejo.ListaDesejos(mydb)
 
 
 def CaseProduto(mydb):
@@ -60,7 +65,7 @@ def CaseProduto(mydb):
             case '4':
                 AtualizarProdutoByID.AtualizarProdutoID(mydb)
             case '5':
-                DeletarUsuario.DeletarUsuarioID(mydb)
+                DeletarProdutoID.DeletarProdutoID(mydb)
                 
 
 
@@ -71,12 +76,19 @@ def CaseCompra(mydb):
         - [0]Voltar\n
         - [1]ComprarProduto\n
         - [2]Deletar Compra\n
-        - [3]buscar Compra\n
-        - [4]Atualizar Compra\n
+        - [3]buscar todas Compras\n
+        - [4]buscar Compra por id\n
+
         ''')
         escolha = input(str('escolha Uma Obção:'))
         match escolha:
             case '0':
-                break
+                return
             case '1':
                 ComprarProduto.Compra(mydb)
+            case '2':
+                DeletarCompra.DeletarCompraID(mydb)
+            case '3':
+                BuscaCompra.PegarCompras(mydb)
+            case '4':
+                BuscaCompra.ComprasbyID(mydb)

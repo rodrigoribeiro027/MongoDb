@@ -6,6 +6,7 @@ def PegarUsuarios(mydb):
     mydoc = mycol.find().sort("Nome")
     for x in mydoc:
         print(x)
+    return mydoc
 
 def UsuariobyID(mydb):
     #Query

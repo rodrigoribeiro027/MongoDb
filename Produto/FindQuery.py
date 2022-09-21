@@ -6,6 +6,7 @@ def PegarProdutos(mydb):
     mydoc = mycol.find().sort("Nome")
     for x in mydoc:
         print(x)
+    return mydoc
 
 def ProdutosbyID(mydb):
     #Query

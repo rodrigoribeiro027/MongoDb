@@ -3,9 +3,8 @@ global mydb
 def CadastrarProduto(mydb):
     Nome =  input(str('escreva seu Nome Produto:'))
     Data_Produto =  input(str('escreva seu Data do Produto:'))
-    Descricao =  input(str('escreva uma Descrição:'))
-    Preco =  input(str('escreva seu Preço:'))
     Descricao =  input(str('escreva sua Descrição:'))
+    Preco =  input(str('escreva seu Preço:'))
     Quantidade_Estoque =  input(str('escreva Quantidade Estoque desse Produto:'))
     NomeVendedor =  input(str('escreva O Nome do Vendedor:'))
     Telefone =  input(str('escreva O Telefone do Vendedor:'))

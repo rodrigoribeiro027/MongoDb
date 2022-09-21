@@ -12,22 +12,6 @@ client = pymongo.MongoClient("mongodb+srv://rodrigo:Password@rodrigo.8fj9sjv.mon
 global mydb
 mydb = client.mercado_Livre
 
-
-def ListaDesejosUsuario():
-    global mydb
-    mycol = mydb.usuario
-    print("\n #####insert Usuario Inserido ###")
-    myquery = { "Nome": "Rodrigo Ribeiro Dos Santos" }
-    mydict = {
-    "lista_Desejo":[{"Produto_ID":{"id":"630f45304b88272631990c17"},
-    "Nome":"Rodrigo Ribeiro ","Preco":"3500"},{"Vendedor_ID":{"$oid":"630f458c4b88272631990c18"},
-    "Nome":"Mercado livre Brasil","Telefone":"1239256454"}],"Cidade":"Sp","Endereco":"Rua joaquim andrade n123"
-}
-    mydoc = mycol.find(myquery).insert_one(mydict)
-    for x in mydoc:
-        print(x)
-
-
 execucao = True
 while execucao:
   print('''Escolha Uma Opção:\n
@@ -41,7 +25,7 @@ while execucao:
       case '0':
           break
       case '1':
-          break
+        ListaUsuario.CaseCompra(mydb)
       case '2':
           ListaUsuario.CaseUsuario(mydb)
       case '3':
