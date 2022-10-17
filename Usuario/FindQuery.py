@@ -15,7 +15,5 @@ def UsuariobyID(mydb):
     mycol = mydb.usuario
     print("\n####QUERY####")
     myquery = { "_id":ObjectId (_id) }
-    mydoc = mycol.find(myquery)
-    for x in mydoc:
-        print(x)
+    mydoc = mycol.find_one(myquery)
     return mydoc

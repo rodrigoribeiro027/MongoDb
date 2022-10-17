@@ -11,6 +11,8 @@ import Compra.Cadastro as ComprarProduto
 import Usuario.ListaDesejo as Desejo
 import Compra.FindQuery as BuscaCompra
 import Compra.deletar as DeletarCompra
+import banco.setUsuario as redis
+
 def CaseUsuario(mydb):
     execucao = True
     while execucao:
@@ -92,3 +94,25 @@ def CaseCompra(mydb):
                 BuscaCompra.PegarCompras(mydb)
             case '4':
                 BuscaCompra.ComprasbyID(mydb)
+def Caseredis(mydb,conR):
+    execucao = True
+    while execucao:
+        print('''Escolha Uma Opção:\n
+        - [0]Voltar\n
+        - [1]SetUsuario Redis\n
+        - [2]Verificar Conta\n
+        - [3]DetUsuario Redis\n
+        - [4]ListUsuario Redis\n
+        ''')
+        escolha = input(str('escolha Uma Obção:'))
+        match escolha:
+            case '0':
+                return
+            case '1':
+                redis.SetUsuarios(mydb,conR)
+            case '2':
+                redis.SetToken(mydb,conR)
+            case '3':
+                redis.deletaRedis(conR)
+            case '4':
+                redis.getUsuariosRedis(conR)   
