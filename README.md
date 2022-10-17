@@ -1,5 +1,33 @@
-## MongoDb
-### Instalações necessarias
+# Disciplina:Banco de Dados Não Relacional
+### Implemente em Python as funções de manipulação da Base de Dados Não Relacional do Mercado Livre (EX1) criado noMongoDB
+<ul>
+  <li>a.Insert em todas as coleções</li>
+  <li>b.Update em todas as coleções</li>
+  <li>c.Search em todas as coleções</li>
+  <li>d.Delete em todas as coleções</li>
+</ul>
+
+
+<h1> Ferramentas Utilizadas </h1>
+
+* Python;
+* Visual Studio Code;
+
+<hr>
+<div>
+ <h2>Exercicio</h2>
+ 
+  :link: [PDF](https://github.com/rodrigoribeiro027/NoSQL-Python_MongoDB/blob/main/Exercicio/EX2.pdf)
+  <br>
+  :link: [Exemplo.py](https://github.com/rodrigoribeiro027/NoSQL-Python_MongoDB/blob/main/Exercicio/exmongodb.py)
+ <div>
+ 
+<h2>Instalações necessarias</h2
+>
+<strong>Clonar o repositório </strong>
+
+<strong> Abra a pasta e insira no terminal</strong>
+
 <strong>Python version: 3.10</strong>
 ```bash
 pip install dnspython
@@ -22,3 +50,4 @@ mongodb+srv://'Rodrigo':'minhaSenha'
 ```bash
 Python main.py
 ```
+
