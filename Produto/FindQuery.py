@@ -15,7 +15,6 @@ def ProdutosbyID(mydb):
     mycol = mydb.Produtos
     print("\n####QUERY####")
     myquery = { "_id":ObjectId (_id) }
-    mydoc = mycol.find(myquery)
-    for x in mydoc:
-        print(x)
+    mydoc = mycol.find_one(myquery)
+    print(mydoc)
     return mydoc

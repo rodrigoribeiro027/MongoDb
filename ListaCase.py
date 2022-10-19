@@ -103,6 +103,7 @@ def Caseredis(mydb,conR):
         - [2]Verificar Conta\n
         - [3]DetUsuario Redis\n
         - [4]ListUsuario Redis\n
+        - [5]Cadastro Lista de desejos Redis\n
         ''')
         escolha = input(str('escolha Uma Obção:'))
         match escolha:
@@ -116,3 +117,5 @@ def Caseredis(mydb,conR):
                 redis.deletaRedis(conR)
             case '4':
                 redis.getUsuariosRedis(conR)   
+            case '5':
+                redis.setListaFavoritos(mydb,conR)
