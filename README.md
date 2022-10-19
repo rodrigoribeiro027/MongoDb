@@ -7,6 +7,14 @@
   <li>d.Delete em todas as coleções</li>
 </ul>
 
+###Implemente em Python a retirada de 3 itens do Projeto Mercado Livre armazenado no MongoDB para o Redis
+<ul>
+  <li>a.Insert</li>
+  <li>b.Update</li>
+  <li>c.Search</li>
+  <li>d.Delete</li>
+</ul>
+
 
 <h1> Ferramentas Utilizadas </h1>
 
@@ -18,6 +26,8 @@
  <h2>Exercicio</h2>
  
   :link: [PDF](https://github.com/rodrigoribeiro027/NoSQL-Python_MongoDB/blob/main/Exercicio/EX2.pdf)
+  <br>
+  :link: [PDF](https://github.com/rodrigoribeiro027/NoSQL-Python_MongoDB/blob/main/Exercicio/EX3.pdf)
   <br>
   :link: [Exemplo.py](https://github.com/rodrigoribeiro027/NoSQL-Python_MongoDB/blob/main/Exercicio/exmongodb.py)
  <div>
@@ -35,6 +45,10 @@ pip install dnspython
 ```bash
 pip install pymongo
 ```
+```bash
+pip install redis
+```
+
 
 ## Adição de Nome do banco de dados no MongoDB e senha
 
